@@ -3,9 +3,9 @@
 from os import listdir, mkdir, system
 from os.path import isfile, isdir, join, exists
 
-dir = 'mitdb'#'mitdb/'
+dir = 'mitdb/'#'mitdb/'
 #Create folder
-dir_out = dir + 'CSV/'
+dir_out = 'mitdbCSV/'
 if not exists(dir_out):
 	mkdir(dir_out)
 
@@ -18,4 +18,4 @@ for r in records:
 	print(command)
 	system(command)
 
-system(command_annotations)
+# system(command_annotations)
