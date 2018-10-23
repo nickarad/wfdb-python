@@ -1,3 +1,3 @@
 # wfdb-python
 
-<!-- Download Dataset using the below command -->
+<!-- Download MIT-BIH Arrythmia Dataset using the below command -->
