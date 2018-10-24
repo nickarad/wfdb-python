@@ -1,13 +1,18 @@
 # Documentation: https://wfdb.readthedocs.io/en/latest/plot.html
 import wfdb
 
-record = wfdb.rdrecord('mitdb/100', sampto=5000)
-ann = wfdb.rdann('mitdb/100', 'atr', sampto=5000)
+dir_rec = 'mitdb/200'
+samp = 800
+
+
+record = wfdb.rdrecord(dir_rec, sampto=samp)
+ann = wfdb.rdann(dir_rec, 'atr', sampto=samp)
 
 # wfdb.plot_items(signal=record.p_signal,
 #                 ann_samp=[ann.sample, ann.sample],
 #                 title='MIT-BIH Record 100', time_units='seconds',
 #                 figsize=(10,4), ecg_grids='all')
+
 wfdb.plot_items(signal=record.p_signal,
                 ann_samp=[ann.sample, ann.sample],
                 title='MIT-BIH Record 100',

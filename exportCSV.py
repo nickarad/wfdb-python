@@ -13,9 +13,14 @@ records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.dat') != 
 #print records
 
 for r in records:
-
+	# --> Create Csv files
 	command = 'rdsamp -r ' + dir + r[:-4] + ' -c -H -f 0 -v >' + dir_out + r[:-4] + '.csv'
 	print(command)
 	system(command)
+	#  --> Create annotation files
+	command_annotations = 'rdann -r ' + dir + r[:-4] +' -f 0 -a atr -v >' + dir_out + r[:-4] + 'annotations.txt'
+	print(command_annotations)
+	system(command_annotations)
+    
 
 # system(command_annotations)
