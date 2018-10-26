@@ -3,7 +3,7 @@ import wfdb
 
 dir_rec = 'mitdb/100'
 start = 000
-end = 3000
+end = 187
 
 
 record = wfdb.rdrecord(dir_rec, sampfrom=start,sampto=end)

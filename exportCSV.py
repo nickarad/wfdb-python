@@ -10,7 +10,7 @@ if not exists(dir_out):
 	mkdir(dir_out)
 
 records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.dat') != -1)]
-#print records
+# print(records)
 
 for r in records:
 	# --> Create Csv files
@@ -21,6 +21,8 @@ for r in records:
 	command_annotations = 'rdann -r ' + dir + r[:-4] +' -f 0 -a atr -v >' + dir_out + r[:-4] + 'annotations.txt'
 	print(command_annotations)
 	system(command_annotations)
-    
+   
 
 # system(command_annotations)
+records.sort()
+print(records)
